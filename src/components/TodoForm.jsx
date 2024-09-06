@@ -17,7 +17,7 @@ export default function TodoForm({ onAddTodo }) {
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Add new todo"
-        className="flex-1"
+        className="flex-1 dark:text-white"
       />
       <Button type="submit">Add</Button>
     </form>
