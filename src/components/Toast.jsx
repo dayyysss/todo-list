@@ -1,7 +1,7 @@
 import { toast } from 'react-hot-toast'
 
 // The function displays the notice successfully
-export const showSuccessToast = (message: any) => {
+export const showSuccessToast = (message) => {
   toast.success(message, {
     icon: (
       <div className="toast-icon toast-success-icon">
@@ -19,7 +19,7 @@ export const showSuccessToast = (message: any) => {
 }
 
 // The function displays the error message
-export const showErrorToast = (message: any) => {
+export const showErrorToast = (message) => {
   toast.error(message, {
     icon: (
       <div className="toast-icon toast-error-icon">
