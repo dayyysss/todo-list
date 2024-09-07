@@ -1,5 +1,3 @@
-import { Button } from "./ui/button"
-
 export default function TodoItem({ todo, onEdit, onDelete, onToggle }) {
   return (
     <li className={`flex justify-between mt-2 items-center ${todo.completed ? 'line-through text-gray-500 dark:text-gray-400' : ''}`}>
