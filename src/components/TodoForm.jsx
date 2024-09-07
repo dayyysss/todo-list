@@ -10,14 +10,24 @@ export default function TodoForm({ onAddTodo }) {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if (text.trim().length < 3) {
-      toast.error("Todo harus memiliki minimal 3 karakter.") 
+    const trimmedText = text.trim()
+
+    // Validasi minimal 3 karakter
+    if (trimmedText.length < 3) {
+      toast.error("Todo harus memiliki minimal 3 karakter.")
+      return
+    }
+
+    // Validasi maksimal 35 karakter
+    if (trimmedText.length > 25) {
+      toast.error("Todo tidak boleh lebih dari 35 karakter.")
       return
     }
 
     setError("")
 
-    onAddTodo({ id: Date.now(), text, completed: false })
+    // Menambahkan todo baru
+    onAddTodo({ id: Date.now(), text: trimmedText, completed: false })
     setText("")
   }
 

@@ -2,7 +2,7 @@ import TodoItem from './TodoItem'
 
 export default function TodoList({ todos, handleEditClick, handleDeleteClick, handleToggleClick }) {
   return (
-    <ul>
+    <ul className="max-h-64 overflow-y-auto pr-4">
       {todos.map((todo) => (
         <TodoItem
           key={todo.id}
